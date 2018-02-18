@@ -13,9 +13,9 @@ module.exports = function repeat() {
 
   var options = arguments[args_length - 1];
 
-  var count = args_length === 1 ? (options.hash.count || 0) : arguments[0];
-  var start = options.hash.start || 0;
-  var pace = options.hash.pace || 1;
+  var count = args_length === 1 ? (Number(options.hash.count) || 0) : arguments[0];
+  var start = Number(options.hash.start) || 0;
+  var pace = Number(options.hash.pace) || 1;
 
   var data = { count, start, pace };
 
